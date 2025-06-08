@@ -1,0 +1,157 @@
+/* Global Reset & Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  color: #1f2937; /* Base dark text */
+}
+
+/* Container & Title */
+.v2p-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.v2p-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1f2937; /* Ensure dark title */
+}
+
+.v2p-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4b5563; /* Medium slate gray */
+  font-size: 1rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Panels Layout */
+.v2p-panels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Panel Styling */
+.v2p-panel {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Mic Icon */
+.v2p-mic-icon {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #4f46e5;
+}
+
+/* Input Group in Right Panel */
+.v2p-input-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.v2p-or {
+  margin-left: 5px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* Social Icons */
+.v2p-social-icons img {
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.v2p-social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Inputs & Textareas */
+.v2p-input,
+.v2p-textarea {
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f9fafb;
+  margin-bottom: 15px;
+  resize: none;
+  color: #111827; /* Dark text for inputs */
+}
+
+.v2p-input:focus,
+.v2p-textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Buttons */
+.v2p-btn {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.v2p-btn:hover {
+  background-color: #d4d4d4;
+}
+
+.v2p-btn.primary {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.v2p-btn.primary:hover {
+  background-color: #4338ca;
+}
+
+.v2p-btn.success {
+  background-color: #10b981;
+  color: white;
+}
+
+.v2p-btn.success:hover {
+  background-color: #059669;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .v2p-panels {
+    flex-direction: column;
+  }
+
+  .v2p-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .v2p-social-icons {
+    justify-content: center;
+  }
+}
