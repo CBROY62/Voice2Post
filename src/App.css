@@ -1,9 +1,10 @@
-/* Global Reset & Background */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #f5f7fa, #c3cfe2);
   color: #1f2937; /* Base dark text */
+  justify-content: center;
 }
 
 /* Container & Title */
@@ -112,19 +113,19 @@ body {
   font-size: 1rem;
   border-radius: 8px;
   border: none;
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: #40a09b;
+  color: #14161c;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .v2p-btn:hover {
-  background-color: #d4d4d4;
+  background-color: #c50db8;
 }
 
 .v2p-btn.primary {
-  background-color: #4f46e5;
-  color: white;
+  background-color: #46e546;
+  color: rgb(14, 12, 12);
 }
 
 .v2p-btn.primary:hover {
@@ -155,3 +156,57 @@ body {
     justify-content: center;
   }
 }
+
+.v2p-mic-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.v2p-mic-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+.v2p-mic-icon img {
+  width: 42px;
+  height: 42px;
+  z-index: 1;
+}
+
+.v2p-mic-icon.listening::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 115, 177, 0.2);
+  border-radius: 50%;
+  animation: pulse-ring 1.2s infinite;
+  z-index: 0;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
