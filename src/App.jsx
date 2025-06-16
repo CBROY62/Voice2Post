@@ -20,12 +20,12 @@ export default function Voice2Post() {
     recognition.onresult = (event) => {
       const speechResult = event.results[0][0].transcript;
       setTranscript((prev) => prev + (prev ? " " : "") + speechResult);
-    };
+    }
 
     recognition.onerror = (event) => {
       console.error("Speech recognition error", event.error);
     }
-  };
+  }
 
   // Save current transcript into savedText
   const handleSave = () => {
@@ -44,7 +44,7 @@ export default function Voice2Post() {
   // Handle changes in editable savedText textarea
   const handleSavedTextChange = (e) => {
     setSavedText(e.target.value);
-  };
+  }
 
   const handleGenerate = () => {
     if (!prompt.trim()) return;
