@@ -24,7 +24,7 @@ export default function Voice2Post() {
 
     recognition.onerror = (event) => {
       console.error("Speech recognition error", event.error);
-    };
+    }
   };
 
   // Save current transcript into savedText
@@ -39,7 +39,7 @@ export default function Voice2Post() {
   const toggleEdit = () => {
     if (!savedText.trim()) return; // Do nothing if no saved text
     setIsEditing((prev) => !prev);
-  };
+  }
 
   // Handle changes in editable savedText textarea
   const handleSavedTextChange = (e) => {
@@ -70,7 +70,7 @@ export default function Voice2Post() {
       </p>
 
       <div className="v2p-panels">
-        {/* Left Panel */}
+        { /* Left Panel */ }
         <div className="v2p-panel">
           <div
             className="v2p-mic-icon"
@@ -149,4 +149,4 @@ export default function Voice2Post() {
       </div>
     </div>
   );
-}
+};
